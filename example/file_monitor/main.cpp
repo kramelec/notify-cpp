@@ -13,7 +13,7 @@ int main(int argc, char** argv)
 
     // Create the linux notification backend
     const auto createBackend = [&usage](const std::string& backend) -> notifycpp::NotifyController {
-        if (backend != std::string("fanotify") || backend != std::string("inotify")) {
+        if (backend != std::string("fanotify") && backend != std::string("inotify")) {
             usage();
         }
         if (backend == std::string("fanotify"))

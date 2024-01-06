@@ -24,10 +24,12 @@ add_executable(file_monitor main.cpp)
 
 target_include_directories(
   file_monitor
-  PUBLIC ${NOTIFYCPP_INCLUDE_DIRS}
+#  PUBLIC ${NOTIFYCPP_INCLUDE_DIRS}
+  PUBLIC ../../include
 )
 
 target_link_libraries(
   file_monitor
-  PUBLIC ${NOTIFYCPP_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} stdc++fs
+#  PUBLIC ${NOTIFYCPP_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} stdc++fs
+  PUBLIC notify-cpp-shared ${CMAKE_THREAD_LIBS_INIT} stdc++fs
 )
